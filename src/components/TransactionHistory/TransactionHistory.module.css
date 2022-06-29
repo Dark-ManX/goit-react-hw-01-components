@@ -1,0 +1,10 @@
+.transactionHistory {
+    margin: 0 auto;
+    width: 50%;
+}
+
+.tableHead {
+    background-color: blue;
+    color: white;
+    text-align: center;
+}

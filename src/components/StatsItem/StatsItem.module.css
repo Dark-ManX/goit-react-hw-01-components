@@ -1,0 +1,15 @@
+.item {
+    display: inline-block;
+    padding: 20px 20px;
+}
+
+.label {
+    display: block;
+    text-align: center;
+}
+
+.percentage {
+    display: block;
+    font-weight: 800;
+    text-align: center;
+}
