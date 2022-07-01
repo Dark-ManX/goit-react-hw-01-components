@@ -16,7 +16,11 @@ const TransactionHistory = ({operations}) => {
         </thead>
 
         <tbody>
-            {operations.map(transaction => {return <TransactionRender key={transaction.id} type={transaction.type} amount={transaction.amount} currency={transaction.currency}/>})}
+            {operations.map(transaction => {
+                return (
+                    <TransactionRender key={transaction.id} type={transaction.type} amount={transaction.amount} currency={transaction.currency}/>
+                )
+            })}
         </tbody>
         </table>
     )

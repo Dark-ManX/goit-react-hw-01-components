@@ -2,18 +2,18 @@ import PropTypes from 'prop-types';
 import StatsItem from '../StatsItem/StatsItem';
 import styles from './AppStatistic.module.css';
 
-const AppStatistic = ({stats}) => {
+const AppStatistic = ({stats, title}) => {
 
   return (
     <section className="statistic">
-      <h2 className={[styles.title]}>Upload stats</h2>
+      {title ? (<h2 className={[styles.title]}>{title}</h2>) : null}
       
       <ul className={[styles.statList]}>
-        {stats.map(item => {
+        {stats.map(({id, label, percentage}) => {
           return <StatsItem 
-            key={item.id} 
-            name={item.label} 
-            value={item.percentage} 
+            key={id} 
+            name={label} 
+            value={percentage} 
           />;
         })}
       </ul>

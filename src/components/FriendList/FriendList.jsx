@@ -4,12 +4,12 @@ import styles from './FriendList.module.css';
 
 const FriendList = ({friends}) => {
   return (<ul className={[styles.friendsList]}>
-    {friends.map(friend => {
+    {friends.map(({id, avatar, name, isOnline}) => {
       return <RenderFriend 
-        key={friend.id} 
-        avatar={friend.avatar} 
-        name={friend.name} 
-        status={friend.isOnline}
+        key={id} 
+        avatar={avatar} 
+        name={name} 
+        status={isOnline}
       />;
     })}
   </ul>
